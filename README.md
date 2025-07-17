@@ -6,7 +6,7 @@ The goal is to keep the repo simple and open-ended, allowing tools like GitHub C
 
 ## Current Scripts
 
-- *(more coming soon...)*
+- **`health_data_fetcher.py`** - Fetches global health data by country using the World Bank API
 
 ## Ideas
 
@@ -21,3 +21,32 @@ Clone the repo and explore:
 ```bash
 git clone https://github.com/your-org/funrepo.git
 cd funrepo
+```
+
+### Health Data Fetcher
+
+Fetch global health statistics by country:
+
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Get health data for a specific country (use 3-letter country codes)
+python health_data_fetcher.py USA
+python health_data_fetcher.py GBR
+python health_data_fetcher.py DEU
+
+# List all available countries
+python health_data_fetcher.py --list-countries
+
+# Get help
+python health_data_fetcher.py --help
+```
+
+The health data fetcher provides statistics including:
+- Life expectancy at birth
+- Mortality rates (under-5 and infant)
+- Health expenditure as % of GDP
+- Physicians per 1,000 people
+- Malnutrition prevalence
+- Birth attendance by skilled health staff
